@@ -16,10 +16,29 @@ class TheOffice:
         return f"Welcome to The Office! The boss here is {self.regional_manager}."
 
     def record_sale(self, employee: Employee) -> None:
+        """A method used to record a sale for an employee
+
+        Args:
+            employee (Employee): The employee that made the sale 
+        """
         self.sales[employee] += 1
 
     def get_employee_sales(self, employee: Employee) -> int:
+        """Method that returns the number of sales given an employee
+
+        Args:
+            employee (Employee): The employee whose sales number we are interested in.
+
+        Returns:
+            int: The total number of sales the employee has made.
+        """
+
         return self.sales[employee]
 
     def _fire_employee(self, employee: Employee) -> None:
+        """A method used to fire an employee
+
+        Args:
+            employee (Employee): The employee to be fired
+        """
         self.employees.remove(employee)
